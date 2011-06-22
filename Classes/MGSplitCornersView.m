@@ -8,6 +8,12 @@
 
 #import "MGSplitCornersView.h"
 
+@interface MGSplitCornersView ()
+
+double deg2Rad(double degrees);
+double rad2Deg(double radians);
+
+@end
 
 @implementation MGSplitCornersView
 
