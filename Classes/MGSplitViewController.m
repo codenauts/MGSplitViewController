@@ -517,6 +517,14 @@
 	[self.detailViewController viewDidDisappear:animated];
 }
 
+- (void)didReceiveMemoryWarning {
+  // Do nothing
+}
+
+- (void)viewDidUnload {
+  // Do nothing
+}
+
 
 #pragma mark -
 #pragma mark Popover handling
