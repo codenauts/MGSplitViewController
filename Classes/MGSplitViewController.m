@@ -694,6 +694,9 @@
 		// Show popover.
 		[_hiddenPopoverController presentPopoverFromBarButtonItem:_barButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 	}
+  else {
+    [_hiddenPopoverController dismissPopoverAnimated:YES];
+  }
 }
 
 
