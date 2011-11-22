@@ -603,6 +603,12 @@
 	[self popoverControllerDidDismissPopover:_hiddenPopoverController];
 }
 
+- (void)dismissPopover {
+  if (_hiddenPopoverController.popoverVisible) {
+    [_hiddenPopoverController dismissPopoverAnimated:YES];
+  }
+}
+
 
 #pragma mark -
 #pragma mark Animations
@@ -691,7 +697,7 @@
 }
 
 
-- (IBAction)showMasterPopover:(id)sender
+- (IBAction)showMasterPopover:(UIBarButtonItem *)sender
 {
 	if (_hiddenPopoverController && !(_hiddenPopoverController.popoverVisible)) {
 		// Inform delegate.
@@ -700,9 +706,9 @@
 																	 popoverController:_hiddenPopoverController 
 															 willPresentViewController:self.masterViewController];
 		}
-		
+    
 		// Show popover.
-		[_hiddenPopoverController presentPopoverFromBarButtonItem:_barButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+		[_hiddenPopoverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 	}
   else {
     [_hiddenPopoverController dismissPopoverAnimated:YES];

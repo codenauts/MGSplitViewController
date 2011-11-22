@@ -58,6 +58,7 @@ typedef enum _MGSplitViewDividerStyle {
 - (void)notePopoverDismissed; // should rarely be needed, because you should not change the popover's delegate. If you must, then call this when it's dismissed.
 
 // Conveniences for you, because I care.
+- (void)dismissPopover;
 - (BOOL)isShowingMaster;
 - (void)setSplitPosition:(float)posn animated:(BOOL)animate; // Allows for animation of splitPosition changes. The property's regular setter is not animated.
 /* Note:	splitPosition is the width (in a left/right split, or height in a top/bottom split) of the master view.
